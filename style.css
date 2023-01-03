@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+  background-color: #fffefe;
+  color: #36352e;
+}
+
+::placeholder {
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 25rem auto;
+  grid-template-rows: 5rem auto;
+  background-color: #f7f6f3;
+  margin: 0 auto;
+}
+
+.nav-left {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  background-color: #f7f6f3;
+  font-size: 5rem;
+  font-family: "Comforter";
+  margin: auto;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  background-color: #f7f6f3;
+}
+.nav-right div {
+  font-size: 2rem;
+  background-color: #f7f6f3;
+}
+.btn-add-note:hover {
+  cursor: pointer;
+}
+
+.btn-delete-note {
+  width: 2rem;
+  height: 1rem;
+  visibility: hidden;
+}
+/* 
+.note div {
+  /* width: 5rem;
+  height: 2rem; */
+/* } */ 
+.note-operations {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  background-color: #f7f6f3;
+}
+
+.note-operations div {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f7f6f3;
+  font-size: 1.5rem;
+  color: #73716b;
+  height: 2rem;
+}
+
+.note-operations div:hover {
+  background-color: #e8e6e5;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.note-operations div:hover .trash-icon {
+  display: block;
+  /* opacity: 1; */
+}
+.note-operations div:hover div {
+  background-color: #e8e6e5;
+}
+.note-operations div:hover img {
+  background-color: #e8e6e5;
+}
+
+.editor {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+}
+.container-editor {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.editor-text-title {
+  min-height: 5.5rem;
+  /* min-width: none; */
+  width: 80rem;
+  /* background-color: #fafafa; */
+  border-radius: 0.4rem;
+  font-size: 4rem;
+  font-weight: 700;
+  word-break: break-word;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+.editor-text {
+  background-color: red;
+  font-size: 1.6rem;
+  height: 10rem;
+  /* min-height: rem; */
+  overflow: visible;
+  width: 80rem;
+  border-radius: 0.4rem;
+  background-color: #fafafa;
+  word-break: break-word;
+}
+
+.test {
+  font-size: 3rem;
+}
+[contentEditable="true"]:empty:not(:focus):before {
+  content: attr(data-text);
+  color: rgba(55, 53, 47, 0.15);
+}
+
+[contenteditable] {
+  /* outline: 0px solid transparent; */
+  outline: none;
+}
+
+.default-msg {
+  font-size: 3rem;
+  color: #73716b;
+}
+
+.trash-icon {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  background-color: #f7f6f3;
+  /* opacity: 0; */
+}
